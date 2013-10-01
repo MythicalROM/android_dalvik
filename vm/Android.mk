@@ -55,7 +55,7 @@ include $(LOCAL_PATH)/ReconfigureDvm.mk
 
 # Overwrite default settings
 LOCAL_MODULE := libdvm
-LOCAL_CFLAGS += $(target_smp_flag)
+LOCAL_CFLAGS += $(target_smp_flag) -Wno-unused-but-set-variable
 ifeq ($(TARGET_ARCH_LOWMEM),true)
   LOCAL_CFLAGS += -DDALVIK_LOWMEM
 endif
